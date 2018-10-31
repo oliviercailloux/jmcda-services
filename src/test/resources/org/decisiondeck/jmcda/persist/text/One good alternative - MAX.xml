@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>One good alternative - MAX</title>
+		<comment>A trivial problem where only one alternative is assigned by a single decision maker, modified to contain only criteria to be maximized.</comment>
+	</projectReference>
+	<alternatives mcdaConcept="REAL">
+		<alternative id="Good" name="Good" />
+	</alternatives>
+	<alternatives mcdaConcept="FICTIVE">
+		<alternative id="middle_profile" name="middle_profile">
+		</alternative>
+	</alternatives>
+	<categories>
+		<category id="good">
+			<rank>
+				<integer>1</integer>
+			</rank>
+		</category>
+		<category id="bad">
+			<rank>
+				<integer>2</integer>
+			</rank>
+		</category>
+	</categories>
+	<categoriesProfiles>
+		<categoryProfile>
+			<alternativeID>middle_profile</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>bad</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>good</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+	</categoriesProfiles>
+	<criteria>
+		<criterion id="rsk" name="risk">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="ben" name="benefit">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+	</criteria>
+	<performanceTable>
+		<alternativePerformances>
+			<alternativeID>Good</alternativeID>
+			<performance>
+				<criterionID>rsk</criterionID>
+				<value>
+					<real>0.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>ben</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+	<methodParameters>
+		<parameter>
+			<value>
+				<label>dm</label>
+			</value>
+		</parameter>
+	</methodParameters>
+	<alternativesAffectations name="dm">
+		<alternativeAffectation>
+			<alternativeID>Good</alternativeID>
+			<categoryID>good</categoryID>
+		</alternativeAffectation>
+	</alternativesAffectations>
+</xmcda:XMCDA>

@@ -1,0 +1,22 @@
+c Size. (Criteria, Categories, Actions.)
+t	0	0	0
+
+c Direction.
+d
+
+c Profiles (worst first).
+
+c Thresholds.
+c	profId	critId	indiffT	prefT
+
+c Actions.
+c	id	LowC	HighC
+
+c Bounds on weights. (NB: sum of weights is one.)
+
+c Number of constraints on weights.
+K N	0
+
+c Cutting levels.
+L m	0.5
+L M	1

@@ -1,6 +1,7 @@
-*/.classpath
-*/.project
-*/.settings
+.classpath
+.project
+.settings/
+target/
 
 *.class
 
@@ -10,7 +11,6 @@
 
 */detailed.log
 */errors.log
-*/target/
 
 *.pyc
 
